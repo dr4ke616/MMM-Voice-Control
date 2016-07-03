@@ -1,0 +1,28 @@
+{
+    "home" : {
+      "commands" : "Sagen Sie \"Was kann ich sagen?\" eine Liste von Befehlen zu sehen..."
+    },
+    "commands": {
+        "title" : "Zur Verfügung stehenden Befehle",
+        "list": {
+            "text": "Was kann ich sagen?",
+            "voice": "Was kann ich sagen",
+            "description": "Zeigt eine Liste der möglichen Kommandos."
+        },
+        "home": {
+            "text": "Zurück",
+            "voice": "Zurück",
+            "description": "zurück"
+        },
+        "sleep": {
+            "text": "Bereitschaft",
+            "voice": "Bereitschaft",
+            "description": "Bereitschaft"
+        },
+        "wake_up": {
+            "text": "Aktiviere",
+            "voice": "Aktivieren",
+            "description": "Aktivieren"
+        }
+    }
+}

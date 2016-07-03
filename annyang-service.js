@@ -22,7 +22,7 @@ function AnnyangService(root) {
 		return obj1;
 	}
 
-	service.addCommand = function(phrase, callback) {
+	service.registerCommand = function(phrase, callback) {
 		var command = {};
 
 		// Wrap annyang command in scope apply
@@ -41,10 +41,8 @@ function AnnyangService(root) {
 		annyang.setLanguage(langCode);
 	};
 
-	service.setLanguage(config.language);
-
 	service.start = function(onListeningStarted, interimResult, result, error) {
-		annyang.addCommands(service.commands);
+		service.setLanguage(config.language);
 		annyang.debug(true);
 		// add specified callback functions
 		if (typeof(onListeningStarted) == "function") {

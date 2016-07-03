@@ -1,0 +1,28 @@
+{
+    "home" : {
+        "commands" : "Dis: \"Que puis-je dire?\" pour voir une liste de commandes..."
+    },
+    "commands": {
+        "title" : "Commandes disponibles",
+        "list": {
+            "text": "Que puis-je dire?",
+            "voice": "Que puis-je dire",
+            "description": "Affiche une liste des commandes vocales disponibles."
+        },
+        "home": {
+            "text": "Accueil",
+            "voice": "Accueil",
+            "description": "Vous ramène à l'écran d'accueil"
+        },
+        "sleep": {
+            "text": "Bonne nuit",
+            "voice": "Bonne nuit",
+            "description": "Va te coucher"
+        },
+        "wake_up": {
+            "text": "Réveille toi",
+            "voice": "Réveille toi",
+            "description": "Réveille Toi"
+        }
+    }
+}

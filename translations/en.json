@@ -1,0 +1,28 @@
+{
+    "home" : {
+        "commands" : "Say \"What can I say?\" to see a list of commands..."
+    },
+    "commands": {
+        "title" : "Available Commands",
+        "list": {
+            "text": "What can I say?",
+            "voice": "What can I say",
+            "description": "Shows a list of voice commands available to you."
+        },
+        "home": {
+            "text": "Go home",
+            "voice": "Go home",
+            "description": "Takes you back to the home screen"
+        },
+        "sleep": {
+            "text": "Go to sleep",
+            "voice": "Go to sleep",
+            "description": "Go to sleep"
+        },
+        "wake_up": {
+            "text": "Wake up",
+            "voice": "Wake up",
+            "description": "Wake up"
+        }
+    }
+}

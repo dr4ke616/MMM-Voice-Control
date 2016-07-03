@@ -1,0 +1,28 @@
+{
+    "home" : {
+        "commands" : "Dí \"¿Qué digo?\" para mostrar las órdenes..."
+    },
+    "commands": {
+        "title" : "Listado de Órdenes",
+        "list": {
+            "text": "¿Qué digo?",
+            "voice": "Que digo",
+            "description": "Lista de los comandos de voz"
+        },
+        "home": {
+            "text": "Vuelve",
+            "voice": "Vuelve",
+            "description": "Vuelve al menú principal"
+        },
+        "sleep": {
+            "text": "Duerme",
+            "voice": "Duerme",
+            "description": "Duerme el sistema"
+        },
+        "wake_up": {
+            "text": "Despierta",
+            "voice": "Despierta",
+            "description": "Despierta el sistema"
+        }
+    }
+}

@@ -7,12 +7,22 @@ Module.register("voicecontrol", {
 	},
 
 	getScripts: function() {
-		return ['annyang.js', 'annyang-service.js', 'moment.js']
+		return ['annyang.js', 'annyang-service.js', 'moment.js', 'commands.js']
 	},
 
 	// Define required scripts.
 	getStyles: function() {
 		return ["style.css"];
+	},
+
+	getTranslations: function() {
+		return {
+			en: "translations/en.json",
+			de: "translations/de.json",
+			de: "translations/es.json",
+			de: "translations/fr.json",
+			de: "translations/ko.json"
+		}
 	},
 
 	// Override dom generator.
@@ -38,14 +48,16 @@ Module.register("voicecontrol", {
 		this.isListening = false;
 		this.interimResult = "Say Something...";
 
-		this.registerCommands();
+		CommandManager(this)
+
 		this.startAnnayang();
 	},
 
-	registerCommands: function() {
-		this.annyangService.addCommand('what can I say', function() {
-			Log.info("I ma here±!")
-		})
+	registerCommand: function(commandId, commandFunction) {
+		var voiceTranslation = Translator.translations.voicecontrol.commands[commandId].voice;
+		var textTranslation = Translator.translations.voicecontrol.commands[commandId].text;
+		var descTranslation = Translator.translations.voicecontrol.commands[commandId].description;
+		this.annyangService.registerCommand(voiceTranslation, commandFunction);
 	},
 
 	startAnnayang: function() {
@@ -58,7 +70,7 @@ Module.register("voicecontrol", {
 			function(interimResult){
 				self.interimResult = interimResult;
 				window.clearTimeout(resetCommandTimeout);
-				Log.info("Interim result " + self.interimResult)
+				Log.info("Interim result: " + self.interimResult)
 				self.updateDom()
 			},
 			function(result){
