@@ -8,6 +8,11 @@ This an extension for the [MagicMirror](https://github.com/MichMich/MagicMirror)
 2. Execute `npm install` to install the node dependencies.
 4. Start magic mirror
 
+## Supported Commnds:
+
+- Go to sleep
+- Wake up
+
 ## Using the module
 
 To use this module, add it to the modules array in the `config/config.js` file:
