@@ -38,17 +38,20 @@ Module.register("voicecontrol", {
 		scope.updateDom();
 	},
 
+	setLanguage: function() {
+		moment.locale(config.language);
+		this.annyangService.setLanguage(config.language);
+	},
+
 	start: function() {
 		Log.info("Starting module: " + this.name);
 
-		// Set locale.
-		moment.locale(config.language);
-
 		this.annyangService = AnnyangService();
 		this.isListening = false;
-		this.interimResult = "Say Something...";
+		this.setLanguage()
+		this.interimResult = Translator.translations.voicecontrol.home.commands;
 
-		CommandManager(this)
+		CommandManager(this);
 
 		this.startAnnayang();
 	},

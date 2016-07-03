@@ -42,7 +42,6 @@ function AnnyangService(root) {
 	};
 
 	service.start = function(onListeningStarted, interimResult, result, error) {
-		service.setLanguage(config.language);
 		annyang.debug(true);
 		// add specified callback functions
 		if (typeof(onListeningStarted) == "function") {
