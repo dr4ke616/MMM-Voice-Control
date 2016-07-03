@@ -1,13 +1,13 @@
 Module.register("voicecontrol", {
 
 	// Default module config.
-    defaults: {
-        language: "en",
-        restTimeout: 3000
-    },
+	defaults: {
+		language: "en",
+		restTimeout: 3000
+	},
 
-    getScripts: function() {
-    	return ['annyang.js', 'annyang-service.js', 'moment.js']
+	getScripts: function() {
+		return ['annyang.js', 'annyang-service.js', 'moment.js']
 	},
 
 	// Define required scripts.
@@ -23,10 +23,10 @@ Module.register("voicecontrol", {
 		return wrapper;
 	},
 
-    restCommand: function(scope) {
-    	scope.interimResult = "Say Something...";
-    	scope.updateDom();
-    },
+	restCommand: function(scope) {
+		scope.interimResult = "Say Something...";
+		scope.updateDom();
+	},
 
 	start: function() {
 		Log.info("Starting module: " + this.name);
