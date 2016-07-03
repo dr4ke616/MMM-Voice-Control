@@ -1,0 +1,23 @@
+{
+  "name": "Magic-Mirror-Module-Voice-Control",
+  "version": "1.0.0",
+  "description": "Magic Mirror voice control.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dr4ke616/MMM-Voice-Control"
+  },
+  "keywords": [
+    "magic mirror",
+    "smart mirror",
+    "voice control",
+    "module"
+  ],
+  "author": "Adam Drakeford",
+  "contributors": "https://github.com/dr4ke616/MMM-Voice-Control/graphs/contributors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dr4ke616/MMM-Voice-Control/issues"
+  },
+  "homepage": "https://github.com/dr4ke616/MMM-Voice-Control#readme",
+  "dependencies": {}
+}
