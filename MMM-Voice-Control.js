@@ -34,14 +34,14 @@ Module.register("MMM-Voice-Control", {
 	},
 
 	restCommand: function(scope) {
-		scope.interimResult = "Say Something...";
+		scope.interimResult = Translator.translations[this.name].home.commands;
 		scope.updateDom();
 	},
 
 	setLanguage: function() {
 		moment.locale(config.language);
 		this.annyangService.setLanguage(config.language);
-		this.interimResult = Translator.translations['MMM-Voice-Control'].home.commands;
+		this.interimResult = Translator.translations[this.name].home.commands;
 	},
 
 	start: function() {
@@ -57,9 +57,9 @@ Module.register("MMM-Voice-Control", {
 	},
 
 	registerCommand: function(commandId, commandFunction) {
-		var voiceTranslation = Translator.translations['MMM-Voice-Control'].commands[commandId].voice;
-		var textTranslation = Translator.translations['MMM-Voice-Control'].commands[commandId].text;
-		var descTranslation = Translator.translations['MMM-Voice-Control'].commands[commandId].description;
+		var voiceTranslation = Translator.translations[this.name].commands[commandId].voice;
+		var textTranslation = Translator.translations[this.name].commands[commandId].text;
+		var descTranslation = Translator.translations[this.name].commands[commandId].description;
 		this.annyangService.registerCommand(voiceTranslation, commandFunction);
 	},
 
