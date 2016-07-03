@@ -1,4 +1,4 @@
-Module.register("voicecontrol", {
+Module.register("MM-Voice-Control", {
 
 	// Default module config.
 	defaults: {
@@ -41,6 +41,7 @@ Module.register("voicecontrol", {
 	setLanguage: function() {
 		moment.locale(config.language);
 		this.annyangService.setLanguage(config.language);
+		this.interimResult = Translator.translations['MM-Voice-Control'].home.commands;
 	},
 
 	start: function() {
@@ -48,8 +49,7 @@ Module.register("voicecontrol", {
 
 		this.annyangService = AnnyangService();
 		this.isListening = false;
-		this.setLanguage()
-		this.interimResult = Translator.translations.voicecontrol.home.commands;
+		this.setLanguage();
 
 		CommandManager(this);
 
@@ -57,9 +57,9 @@ Module.register("voicecontrol", {
 	},
 
 	registerCommand: function(commandId, commandFunction) {
-		var voiceTranslation = Translator.translations.voicecontrol.commands[commandId].voice;
-		var textTranslation = Translator.translations.voicecontrol.commands[commandId].text;
-		var descTranslation = Translator.translations.voicecontrol.commands[commandId].description;
+		var voiceTranslation = Translator.translations['MM-Voice-Control'].commands[commandId].voice;
+		var textTranslation = Translator.translations['MM-Voice-Control'].commands[commandId].text;
+		var descTranslation = Translator.translations['MM-Voice-Control'].commands[commandId].description;
 		this.annyangService.registerCommand(voiceTranslation, commandFunction);
 	},
 
