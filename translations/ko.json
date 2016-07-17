@@ -9,11 +9,6 @@
             "voice": "사용가능한 질문",
             "description": "사용 가능한 질문\" 이라 말해 보세요\""
         },
-        "home": {
-            "text": "집",
-            "voice": "(집)(메인 화면)",
-            "description": "메인 화면으로 돌아갑니다."
-        },
         "sleep": {
             "text": "잠자러가",
             "voice": "잠자러가",
@@ -23,6 +18,16 @@
             "text": "일어나",
             "voice": "일어나",
             "description": "일어나"
+        },
+        "dublinbus_start": {
+            "text": "버스 시간 보기",
+            "voice": "버스 시간 보기",
+            "description": "더블린 버스 시간 보기"
+        },
+        "dublinbus_stop": {
+            "text": "쇼 타임 dublClose 버스 버스 회",
+            "voice": "쇼 타임 dublClose 버스 버스 회",
+            "description": "닫기 더블린 버스 시간"
         }
     }
 }

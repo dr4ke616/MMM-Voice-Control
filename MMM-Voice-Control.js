@@ -3,7 +3,8 @@ Module.register("MMM-Voice-Control", {
 	// Default module config.
 	defaults: {
 		language: "en",
-		restTimeout: 3000
+		voiceTextRestTimeout: 3000, // 3 seconds
+		listOfCommandsNotificationTime: 10000 // 10 seconds
 	},
 
 	getScripts: function() {
@@ -50,6 +51,10 @@ Module.register("MMM-Voice-Control", {
 		this.annyangService = AnnyangService();
 		this.isListening = false;
 		this.setLanguage();
+		this.readableCommands = {
+			header: this.interimResult,
+			commands: []
+		}
 
 		CommandManager(this);
 
@@ -60,6 +65,7 @@ Module.register("MMM-Voice-Control", {
 		var voiceTranslation = Translator.translations[this.name].commands[commandId].voice;
 		var textTranslation = Translator.translations[this.name].commands[commandId].text;
 		var descTranslation = Translator.translations[this.name].commands[commandId].description;
+		this.readableCommands.commands.push(textTranslation + ": " + descTranslation)
 		this.annyangService.registerCommand(voiceTranslation, commandFunction);
 	},
 
@@ -81,7 +87,7 @@ Module.register("MMM-Voice-Control", {
 					self.interimResult = result[0];
 					resetCommandTimeout = window.setTimeout(function() {
 						self.restCommand(self)
-					}, self.config.restTimeout);
+					}, self.config.voiceTextRestTimeout);
 				}
 			},
 			function(error){

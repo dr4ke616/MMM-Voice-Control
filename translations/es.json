@@ -9,11 +9,6 @@
             "voice": "Que digo",
             "description": "Lista de los comandos de voz"
         },
-        "home": {
-            "text": "Vuelve",
-            "voice": "Vuelve",
-            "description": "Vuelve al menú principal"
-        },
         "sleep": {
             "text": "Duerme",
             "voice": "Duerme",
@@ -23,6 +18,16 @@
             "text": "Despierta",
             "voice": "Despierta",
             "description": "Despierta el sistema"
+        },
+        "dublinbus_start": {
+            "text": "Mostrar horarios de los autobuses",
+            "voice": "Mostrar horarios de los autobuses",
+            "description": "Mostrar horarios de los autobuses de Dublín"
+        },
+        "dublinbus_stop": {
+            "text": "Cerrar horarios de los autobuses",
+            "voice": "Cerrar horarios de los autobuses",
+            "description": "Ocultar horarios de los autobuses de Dublín"
         }
     }
 }

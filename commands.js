@@ -2,12 +2,11 @@
 function CommandManager(scope) {
 
 	scope.registerCommand('list', function() {
-		console.debug("Here is a list of commands...");
-		console.log(scope.annyangService.commands);
-	})
-
-	scope.registerCommand('home', function() {
-		console.debug("Ok, going to default view...");
+		scope.sendNotification("SHOW_ALERT", {
+			title: "",
+			message: scope.readableCommands.commands.join("</p><p>"),
+			timer: scope.config.listOfCommandsNotificationTime
+		});
 	})
 
 	scope.registerCommand('sleep', function() {
@@ -22,4 +21,11 @@ function CommandManager(scope) {
 		});
 	})
 
+	scope.registerCommand('dublinbus_start', function() {
+		scope.sendNotification("DUBLINBUS_START");
+	})
+
+	scope.registerCommand('dublinbus_stop', function() {
+		scope.sendNotification("DUBLINBUS_STOP");
+	})
 }

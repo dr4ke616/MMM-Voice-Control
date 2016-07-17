@@ -9,11 +9,6 @@
             "voice": "Que puis-je dire",
             "description": "Affiche une liste des commandes vocales disponibles."
         },
-        "home": {
-            "text": "Accueil",
-            "voice": "Accueil",
-            "description": "Vous ramène à l'écran d'accueil"
-        },
         "sleep": {
             "text": "Bonne nuit",
             "voice": "Bonne nuit",
@@ -23,6 +18,16 @@
             "text": "Réveille toi",
             "voice": "Réveille toi",
             "description": "Réveille Toi"
+        },
+        "dublinbus_start": {
+            "text": "Afficher les horaires de bus",
+            "voice": "Afficher les horaires de bus",
+            "description": "Afficher dublin horaires de bus"
+        },
+        "dublinbus_stop": {
+            "text": "Fermer les horaires de bus",
+            "voice": "Fermer les horaires de bus",
+            "description": "Les périodes de fermeture de bus dublin"
         }
     }
 }

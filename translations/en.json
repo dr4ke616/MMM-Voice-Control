@@ -9,20 +9,25 @@
             "voice": "What can I say",
             "description": "Shows a list of voice commands available to you."
         },
-        "home": {
-            "text": "Go home",
-            "voice": "Go home",
-            "description": "Takes you back to the home screen"
-        },
         "sleep": {
             "text": "Go to sleep",
             "voice": "Go to sleep",
-            "description": "Go to sleep"
+            "description": "Suspends all the running modules"
         },
         "wake_up": {
             "text": "Wake up",
             "voice": "Wake up",
-            "description": "Wake up"
+            "description": "Wakes up all the running modules"
+        },
+        "dublinbus_start": {
+            "text": "Show bus times",
+            "voice": "Show bus times",
+            "description": "Shows dublin bus times for buses heading into town"
+        },
+        "dublinbus_stop": {
+            "text": "Close bus times",
+            "voice": "Close bus times",
+            "description": "Closes displaying bus times notification"
         }
     }
 }

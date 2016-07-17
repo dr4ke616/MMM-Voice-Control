@@ -9,11 +9,6 @@
             "voice": "Was kann ich sagen",
             "description": "Zeigt eine Liste der möglichen Kommandos."
         },
-        "home": {
-            "text": "Zurück",
-            "voice": "Zurück",
-            "description": "zurück"
-        },
         "sleep": {
             "text": "Bereitschaft",
             "voice": "Bereitschaft",
@@ -23,6 +18,16 @@
             "text": "Aktiviere",
             "voice": "Aktivieren",
             "description": "Aktivieren"
+        },
+        "dublinbus_start": {
+            "text": "Zeigen bus mal",
+            "voice": "Zeigen bus mal",
+            "description": "Zeigen Dublin bus mal"
+        },
+        "dublinbus_stop": {
+            "text": "Schließen busfahrplan",
+            "voice": "Schließen busfahrplan",
+            "description": "Ausblenden Dublin Bus mal"
         }
     }
 }
