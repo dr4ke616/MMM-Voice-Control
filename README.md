@@ -45,4 +45,4 @@ modules: [
 Its quiet simple to add more custom commands. 
 
 - Add the extra needed local values to any of the files in the `MMM-Voice-Control/translations/`.
-- The behaviour can then be defined in the `MMM-Voice-Control/commands.js` file.
+- The behaviour can then be defined in the `MMM-Voice-Control/commands.js` file. It is recommended to interface with other modules using Smart Mirror's default alert module. 
