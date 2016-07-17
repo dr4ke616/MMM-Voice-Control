@@ -64,7 +64,7 @@ The following properties can be configured:
 		</tr>
 
 		<tr>
-			<td><code> listOfCommandsNotificationTime </code></td>
+			<td><code>listOfCommandsNotificationTime</code></td>
 			<td>The time in which the "list of commands" notification will be displayed on screen.<br>
 				<br><b>Possible Values:</b> <code>int</code>, <code>float</code> value
 				<br><b>Default value:</b> <code>10000</code> (10 seconds)
