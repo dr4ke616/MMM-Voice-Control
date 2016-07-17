@@ -36,9 +36,43 @@ modules: [
 
 ## Configuration Options
 
-- Set the `language`, default is set to `en`
-- Setting the `voiceTextRestTimeout` in milliseconds will tell the module to restart its listening process. Lower the value means it could reset mid sentence. Higher, means it could take longer time between each speech attempt. Default is set to 3 seconds.
-- `listOfCommandsNotificationTime` in milliseconds is the time in which the *list of commands* notification will be displayed on screen. Default is set to 10 seconds.
+The following properties can be configured:
+
+<table width="100%">
+	<thead>
+		<tr>
+			<th>Option</th>
+			<th width="100%">Description</th>
+		</tr>
+	<thead>
+	<tbody>
+
+		<tr>
+			<td><code>language</code></td>
+			<td>The language used.<br>
+				<br><b>Example:</b> <code>en</code>
+				<br><b>Default value:</b> <code>en</code>
+			</td>
+		</tr>
+
+		<tr>
+			<td><code>voiceTextRestTimeout</code></td>
+			<td>Tell the module to restart its listening process. Lower the value means it could reset mid sentence. Higher, means it could take longer time between each speech attempt.<br>
+				<br><b>Possible Values:</b> <code>int</code> value
+				<br><b>Default value:</b> <code>3000</code> (3 seconds)
+			</td>
+		</tr>
+
+		<tr>
+			<td><code> listOfCommandsNotificationTime </code></td>
+			<td>The time in which the "list of commands" notification will be displayed on screen.<br>
+				<br><b>Possible Values:</b> <code>int</code>, <code>float</code> value
+				<br><b>Default value:</b> <code>10000</code> (10 seconds)
+			</td>
+		</tr>
+
+	</tbody>
+</table>
 
 ## Extending
 
