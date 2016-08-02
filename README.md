@@ -10,7 +10,7 @@ This an extension for the [MagicMirror](https://github.com/MichMich/MagicMirror)
 git clone https://github.com/dr4ke616/MMM-Voice-Control.git
 ```
 
-2. Execute `npm install` to install the node dependencies.
+2. Navigate back to MagicMirror's root directory
 4. Start magic mirror
 
 ## Supported Commands:
