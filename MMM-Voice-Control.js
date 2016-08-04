@@ -8,7 +8,7 @@ Module.register("MMM-Voice-Control", {
 	},
 
 	getScripts: function() {
-		return ['annyang.js', 'annyang-service.js', 'moment.js', 'commands.js'];
+		return [this.file('node_modules/annyang/annyang.js'), 'annyang-service.js', 'moment.js', 'commands.js'];
 	},
 
 	// Define required scripts.
@@ -85,6 +85,8 @@ Module.register("MMM-Voice-Control", {
 			function(result) {
 				if (typeof result != 'undefined') {
 					self.interimResult = result[0];
+					Log.info("Acting on result: " + self.interimResult);
+					self.updateDom(500);
 					resetCommandTimeout = window.setTimeout(function() {
 							self.restCommand(self);
 						},
