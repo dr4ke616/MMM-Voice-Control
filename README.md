@@ -4,12 +4,10 @@ Magic Mirror Module - Voice Control
 This an extension for the [MagicMirror](https://github.com/MichMich/MagicMirror) to allow use of voice commands. Currently it is a very minimal module with support only for [MMM-Dublin-Bus](https://github.com/dr4ke616/MMM-Dublin-Bus)
 
 ## Installation
-1. Navigate into your MagicMirror's `modules` folder and execute 
-	```bash
-	git clone https://github.com/dr4ke616/MMM-Voice-Control.git
-	```
-2. Navigate back to MagicMirror's root directory
-3. Start magic mirror
+1. Navigate into your MagicMirror's `modules` folder
+2. Execute `git clone https://github.com/dr4ke616/MMM-Voice-Control.git`
+3. Navigate back to MagicMirror's root directory
+4. Start magic mirror
 
 ## Supported Commands:
 
