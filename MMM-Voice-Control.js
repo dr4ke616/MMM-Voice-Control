@@ -8,7 +8,7 @@ Module.register("MMM-Voice-Control", {
 	},
 
 	getScripts: function() {
-		return ['annyang.js', 'annyang-service.js', 'moment.js', 'commands.js']
+		return ['annyang.js', 'annyang-service.js', 'moment.js', 'commands.js'];
 	},
 
 	// Define required scripts.
@@ -20,10 +20,10 @@ Module.register("MMM-Voice-Control", {
 		return {
 			en: "translations/en.json",
 			de: "translations/de.json",
-			de: "translations/es.json",
-			de: "translations/fr.json",
-			de: "translations/ko.json"
-		}
+			es: "translations/es.json",
+			fr: "translations/fr.json",
+			ko: "translations/ko.json"
+		};
 	},
 
 	// Override dom generator.
@@ -35,14 +35,14 @@ Module.register("MMM-Voice-Control", {
 	},
 
 	restCommand: function(scope) {
-		scope.interimResult = Translator.translations[this.name].home.commands;
-		scope.updateDom();
+		scope.interimResult = Translator.translate(this, "home").commands;
+		scope.updateDom(500);
 	},
 
 	setLanguage: function() {
 		moment.locale(config.language);
 		this.annyangService.setLanguage(config.language);
-		this.interimResult = Translator.translations[this.name].home.commands;
+		this.interimResult = Translator.translate(this, "home").commands;
 	},
 
 	start: function() {
@@ -54,7 +54,7 @@ Module.register("MMM-Voice-Control", {
 		this.readableCommands = {
 			header: this.interimResult,
 			commands: []
-		}
+		};
 
 		CommandManager(this);
 
@@ -62,37 +62,39 @@ Module.register("MMM-Voice-Control", {
 	},
 
 	registerCommand: function(commandId, commandFunction) {
-		var voiceTranslation = Translator.translations[this.name].commands[commandId].voice;
-		var textTranslation = Translator.translations[this.name].commands[commandId].text;
-		var descTranslation = Translator.translations[this.name].commands[commandId].description;
-		this.readableCommands.commands.push(textTranslation + ": " + descTranslation)
+		var voiceTranslation = Translator.translate(this, "commands")[commandId].voice;
+		var textTranslation = Translator.translate(this, "commands")[commandId].text;
+		var descTranslation = Translator.translate(this, "commands")[commandId].description;
+		this.readableCommands.commands.push(textTranslation + ": " + descTranslation);
 		this.annyangService.registerCommand(voiceTranslation, commandFunction);
 	},
 
 	startAnnayang: function() {
-		var self = this
+		var self = this;
 		var resetCommandTimeout;
-		this.annyangService.start(
-			function(){
+		self.annyangService.start(
+			function() {
 				self.isListening = true;
 			},
-			function(interimResult){
+			function(interimResult) {
 				self.interimResult = interimResult;
 				window.clearTimeout(resetCommandTimeout);
-				Log.info("Interim result: " + self.interimResult)
-				self.updateDom()
+				Log.info("Interim result: " + self.interimResult);
+				self.updateDom(500);
 			},
-			function(result){
-				if(typeof result != 'undefined'){
+			function(result) {
+				if (typeof result != 'undefined') {
 					self.interimResult = result[0];
 					resetCommandTimeout = window.setTimeout(function() {
-						self.restCommand(self)
-					}, self.config.voiceTextRestTimeout);
+							self.restCommand(self);
+						},
+						self.config.voiceTextRestTimeout
+					);
 				}
 			},
-			function(error){
+			function(error) {
 				console.log(error);
-				if(error.error == "network"){
+				if (error.error == "network") {
 					self.speechError = "Google Speech Recognizer is down :(";
 					self.annyangService.abort();
 					self.isListening = false;
