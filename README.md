@@ -6,8 +6,9 @@ This an extension for the [MagicMirror](https://github.com/MichMich/MagicMirror)
 ## Installation
 1. Navigate into your MagicMirror's `modules` folder
 2. Execute `git clone https://github.com/dr4ke616/MMM-Voice-Control.git`
-3. Navigate back to MagicMirror's root directory
-4. Start magic mirror
+3. Execute `npm install` in that folder to download external libraries
+4. Navigate back to MagicMirror's root directory
+5. Start magic mirror
 
 ## Supported Commands:
 
