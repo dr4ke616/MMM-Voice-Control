@@ -5,11 +5,9 @@ This an extension for the [MagicMirror](https://github.com/MichMich/MagicMirror)
 
 ## Installation
 1. Navigate into your MagicMirror's `modules` folder and execute 
-
 ```bash
 git clone https://github.com/dr4ke616/MMM-Voice-Control.git
 ```
-
 2. Navigate back to MagicMirror's root directory
 3. Start magic mirror
 
