@@ -1,3 +1,5 @@
+/* global Module */
+
 Module.register("MMM-Voice-Control", {
 
 	// Default module config.
@@ -35,14 +37,14 @@ Module.register("MMM-Voice-Control", {
 	},
 
 	restCommand: function(scope) {
-		scope.interimResult = Translator.translate(this, "home").commands;
+		scope.interimResult = scope.translate("home").commands;
 		scope.updateDom(500);
 	},
 
 	setLanguage: function() {
 		moment.locale(config.language);
 		this.annyangService.setLanguage(config.language);
-		this.interimResult = Translator.translate(this, "home").commands;
+		this.interimResult = this.translate("home").commands;
 	},
 
 	start: function() {
@@ -62,9 +64,9 @@ Module.register("MMM-Voice-Control", {
 	},
 
 	registerCommand: function(commandId, commandFunction) {
-		var voiceTranslation = Translator.translate(this, "commands")[commandId].voice;
-		var textTranslation = Translator.translate(this, "commands")[commandId].text;
-		var descTranslation = Translator.translate(this, "commands")[commandId].description;
+		var voiceTranslation = this.translate("commands")[commandId].voice;
+		var textTranslation = this.translate("commands")[commandId].text;
+		var descTranslation = this.translate("commands")[commandId].description;
 		this.readableCommands.commands.push(textTranslation + ": " + descTranslation);
 		this.annyangService.registerCommand(voiceTranslation, commandFunction);
 	},
