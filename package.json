@@ -19,5 +19,7 @@
     "url": "https://github.com/dr4ke616/MMM-Voice-Control/issues"
   },
   "homepage": "https://github.com/dr4ke616/MMM-Voice-Control#readme",
-  "dependencies": {}
+  "dependencies": {
+    "annyang" : "2.x.x"
+  }
 }
