@@ -1,0 +1,33 @@
+{
+    "home" : {
+        "commands" : "Diz \"Que posso dizer?\" para ver a lista de comandos..."
+    },
+    "commands": {
+        "title" : "Comandos disponíveis",
+        "list": {
+            "text": "Que posso dizer?",
+            "voice": "Que posso dizer",
+            "description": "Mostra a lista de comandos de voz disponíveis para si.."
+        },
+        "sleep": {
+            "text": "Dorme",
+            "voice": "Dorme",
+            "description": "Suspende todos os módulos a correr"
+        },
+        "wake_up": {
+            "text": "Acorda",
+            "voice": "Acorda",
+            "description": "Acorda todos os módulos suspensos"
+        },
+        "dublinbus_start": {
+            "text": "Mostra o horário dos autocarros",
+            "voice": "Mostra o horario dos autocarros",
+            "description": "Mostra o horário dos autocarros de Dublin"
+        },
+        "dublinbus_stop": {
+            "text": "Fecha o horário dos autocarros",
+            "voice": "Fecha o horário dos autocarros",
+            "description": "Fecha o horário dos autocarros de Dublin"
+        }
+    }
+}
