@@ -10,7 +10,7 @@ Module.register("MMM-Voice-Control", {
 	},
 
 	getScripts: function() {
-		return [this.file('node_modules/annyang/annyang.js'), 'annyang-service.js', 'moment.js', 'commands.js'];
+		return [this.file('node_modules/annyang/dist/annyang.js'), 'annyang-service.js', 'moment.js', 'commands.js'];
 	},
 
 	// Define required scripts.
